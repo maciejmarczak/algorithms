@@ -2,9 +2,9 @@ package org.maciejmarczak.algorithms.graphs.paths;
 
 import org.maciejmarczak.algorithms.graphs.Graph;
 
-class DepthFirstPaths extends Paths {
+public class DepthFirstPaths extends Paths {
 
-    DepthFirstPaths(Graph G, int s) {
+    public DepthFirstPaths(Graph G, int s) {
         marked = new boolean[G.V()];
         edgeTo = new int[G.V()];
         this.s = s;

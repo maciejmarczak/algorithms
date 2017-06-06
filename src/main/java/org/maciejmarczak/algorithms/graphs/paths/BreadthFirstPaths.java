@@ -5,9 +5,9 @@ import org.maciejmarczak.algorithms.graphs.Graph;
 import java.util.LinkedList;
 import java.util.Queue;
 
-class BreadthFirstPaths extends Paths {
+public class BreadthFirstPaths extends Paths {
 
-    BreadthFirstPaths(Graph G, int s) {
+    public BreadthFirstPaths(Graph G, int s) {
         marked = new boolean[G.V()];
         edgeTo = new int[G.V()];
         this.s = s;
