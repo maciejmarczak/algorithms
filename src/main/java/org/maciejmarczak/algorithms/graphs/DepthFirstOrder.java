@@ -2,10 +2,7 @@ package org.maciejmarczak.algorithms.graphs;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.LinkedList;
-import java.util.Queue;
-import java.util.Scanner;
-import java.util.Stack;
+import java.util.*;
 
 public class DepthFirstOrder {
 
@@ -14,7 +11,7 @@ public class DepthFirstOrder {
 
     private final Queue<Integer> pre;
     private final Queue<Integer> post;
-    private final Stack<Integer> reversePost;
+    private final List<Integer> reversePost;
 
     public DepthFirstOrder(Digraph G) {
         this.G = G;
@@ -22,7 +19,7 @@ public class DepthFirstOrder {
 
         pre = new LinkedList<>();
         post = new LinkedList<>();
-        reversePost = new Stack<>();
+        reversePost = new LinkedList<>();
 
         for (int v = 0; v < G.V(); v++) {
             if (!visited[v]) {
@@ -42,7 +39,7 @@ public class DepthFirstOrder {
         }
 
         post.add(s);
-        reversePost.push(s);
+        reversePost.add(0, s);
     }
 
     public Iterable<Integer> pre() {
