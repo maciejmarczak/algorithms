@@ -7,9 +7,9 @@ import java.util.Scanner;
 
 public class Graph {
 
-    private final int V;
-    private int E;
-    private List<Integer>[] adj;
+    final int V;
+    int E;
+    List<Integer>[] adj;
 
     @SuppressWarnings("unchecked")
     public Graph(int V) {
