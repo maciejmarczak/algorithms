@@ -23,6 +23,10 @@ public class DirectedDFS {
         }
     }
 
+    public boolean marked(int v) {
+        return marked[v];
+    }
+
     private void dfs(int s) {
         marked[s] = true;
         for (int v : G.adj(s)) {
